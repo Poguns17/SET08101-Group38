@@ -1,18 +1,27 @@
-body {background-image: url("img/background.png");}
+body {background-color: #2F3356;}
 h1, h2 {font-family: Candara; text-align: center; padding-left: 20px; padding-right: 20px; decoration}
 p {font-size: 17px;}
 a {text-decoration: none; color: red;}
 
-.topnav {background-color: e39774; height: 55px; display: flex; padding-bottom: 10px; margin: auto;}
+.header {display: flex; align-items: center; background-color: 3D3F34;}
 
-.header {display: flex; align-items: center; background-color: 326273;}
+/* nav bar styling*/
+
+.topnav {
+	background-color: AC2218;
+	height: 20px; 
+	display: flex;
+	padding-bottom:	10px; 
+	margin: auto;
+	border:2px solid black;
+	}
 
 .topnav a {
     color: white;
-    font-size: 23px;
+    font-size: 15px;
 	text-align: center;
     text-decoration: none;
-    padding: 20px;
+	padding-top: 5px;
 	margin: auto;
     font-family: Candara;
     display: inline-block; /* Ensures smooth scaling */
@@ -22,9 +31,9 @@ a {text-decoration: none; color: red;}
     transform: scale(1.2); /* Increases size without affecting layout */
 	color: #FFFADA;
 	transform-origin: center;}
-	
 
-/*.head {display: flex; height: 90px; padding: 20px; align: center;}*/
+
+.head {display: flex; height: 90px; padding: 20px; align: center;}
 
 .head {
     display: flex; /* Enables flexbox */
@@ -39,6 +48,24 @@ a {text-decoration: none; color: red;}
 
 .main {
 	padding: 10px;
-	background-color: #5c9ead;
-	
+	background-color: #353662;
+}
+
+.bus, .tram {
+	background-color: 075A9E;
+	border:2px solid black;
+	margin: 5px;
+	margin-bottom: 10px;
+}
+
+.businfo {
+	display: flex;
+}
+
+.bustext, .tramtext {
+	display: inline;
+}
+
+li {
+	text-decoration: underline;
 }
