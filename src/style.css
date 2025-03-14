@@ -51,7 +51,7 @@ a {text-decoration: none; color: red;}
 	background-color: #353662;
 }
 
-.bus, .tram {
+.bus, .tram, .train, .taxi {
 	background-color: 075A9E;
 	border:2px solid black;
 	margin: 5px;
@@ -62,7 +62,7 @@ a {text-decoration: none; color: red;}
 	display: flex;
 }
 
-.bustext, .tramtext {
+.bustext, .tramtext, .traintextm .taxitext {
 	display: inline;
 }
 
