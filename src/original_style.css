@@ -1,32 +1,18 @@
+body {background-color: #2F3356;}
 h1, h2 {font-family: Candara; text-align: center; padding-left: 20px; padding-right: 20px; decoration}
 p {font-size: 18px;}
 a {text-decoration: none; color: red;}
-
-body {
-    background-color: #002147; /* Navy Blue */
-    color: #F5F5DC; /* Beige/Light Gold */
-	font-family: 'Open Sans', sans-serif;
-}
 
 .header {
 	display: flex;
 	align-items: center;
 	background-color: 3D3F34;
 	margin-bottom: 10px;
-	background: url('img/tartan.jpg') repeat;
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-.header h2 {
-    color: #FFF5E1 ;
-    padding: 10px;
-    border-radius: 8px;
-	font-family: 'Playfair Display', serif;
 }
 
 .topnav {
-	background-color: 002147;
-	height: 22px; 
+	background-color: AC2218;
+	height: 20px; 
 	display: flex;
 	padding-bottom:	10px; 
 	margin: auto;
@@ -34,28 +20,30 @@ body {
 }
 
 .topnav a {
-    color: #F5F5DC;
+    color: white;
     font-size: 15px;
 	text-align: center;
-	padding: 10px 15px;
+    text-decoration: none;
 	padding-top: 5px;
 	margin: auto;
     font-family: Candara;
-	transition: background 0.3s;
+    display: inline-block; /* Ensures smooth scaling */
+	transition: transform 0.2s ease, color 0.2s ease;} /* Smooth animation */
 }
-.topnav a:hover {
-    background-color: #AE6192;
-}
+.leftnav a:hover {
+    transform: scale(1.2); /* Increases size without affecting layout */
+	color: #FFFADA;
+	transform-origin: center;}
 
 
 .head {display: flex; height: 90px; padding: 20px; align: center;}
 
 .head {
-    display: flex;
+    display: flex; /* Enables flexbox */
     padding: 20px;
 	text-align: center;
-    justify-content: center; 
-    gap: 20px; 
+    justify-content: center; /* Centers content horizontally */
+    gap: 20px; /* Adds space between elements */
 	height: 90px;
 	background-color: rgba(128, 128, 128, 0.7);
 	padding: 10px;
@@ -65,14 +53,6 @@ body {
 	padding: 10px;
 	background-color: #353662;
 }
-
-.main h1 {
-	font-family: 'Playfair Display', serif;
-	font-size: 24px;
-	background-color: 002147;
-	max-width: auto;
-}
-	
 
 .bus, .tram, .train, .taxi {
 	background-color: 075A9E;
@@ -87,7 +67,6 @@ body {
 
 .bustext, .tramtext, .traintextm .taxitext {
 	display: inline;
-	font-size: 14px;
 }
 
 li {
