@@ -69,8 +69,10 @@ body {
 .main h1 {
 	font-family: 'Playfair Display', serif;
 	font-size: 24px;
-	background-color: 002147;
+	background: url('img/tartan.jpg') repeat;
 	max-width: auto;
+	border:2px solid black;
+
 }
 	
 
@@ -87,9 +89,10 @@ body {
 
 .bustext, .tramtext, .traintextm .taxitext {
 	display: inline;
-	font-size: 14px;
+	font-size: 15px;
 }
 
 li {
 	text-decoration: underline;
+	font-size: 15px;
 }
