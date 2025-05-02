@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wildlife & Nature</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="images/Logo2.png" alt="Edinburgh Logo">
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="wildlife.html">Wildlife & Nature</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <h1 class="page-title">Wildlife & Nature</h1>
+    <div class="separator">
+      <img src="images/arrow-left.svg" alt="" class="sep-arrow left">
+      <hr>
+      <img src="images/arrow-right.svg" alt="" class="sep-arrow right">
+    </div>
+    <form id="gallery-search" class="search-form">
+      <input type="search" id="search-input" placeholder="Search">
+      <button type="submit" aria-label="Search">🔍</button>
+    </form>
+    <section id="image-grid" class="image-grid"></section>
+  </main>
+  <div id="lightbox" class="lightbox hidden" aria-hidden="true">
+    <button id="lb-close" class="lb-btn close" aria-label="Close">×</button>
+    <button id="lb-prev" class="lb-btn prev" aria-label="Previous">‹</button>
+    <img id="lb-image" src="" alt="" class="lb-image">
+    <button id="lb-next" class="lb-btn next" aria-label="Next">›</button>
+  </div>
+  <script>const PAGE_CATEGORY = 'Wildlife & Nature';</script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>
