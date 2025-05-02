@@ -30,7 +30,7 @@ if (scrollBtn) {
     });
 
     scrollBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({top: 0, behavior: 'smooth'});
     });
 }
 
@@ -71,3 +71,62 @@ document.addEventListener("DOMContentLoaded", function () {
         form.reset();
     });
 });
+
+//History page
+// Reveal sections on scroll
+document.addEventListener("DOMContentLoaded", () => {
+    const reveals = document.querySelectorAll(".history-reveal");
+
+    const animateOnScroll = () => {
+        reveals.forEach((el) => {
+            const elementTop = el.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (elementTop < windowHeight - 100) {
+                el.classList.add("active");
+            } else {
+                el.classList.remove("active"); // <-- Remove class if scrolled away
+            }
+        });
+    };
+
+    window.addEventListener("scroll", animateOnScroll);
+    animateOnScroll(); // Run on load too
+});
+
+
+//history quiz
+
+document.getElementById('quiz-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const answers = {
+        q1: 'a',
+        q2: 'b',
+        q3: 'b',
+        q4: 'c',
+        q5: 'a'
+    };
+
+    let score = 0;
+    let feedback = '';
+
+    for (let question in answers) {
+        const selected = document.querySelector(`input[name="${question}"]:checked`);
+        if (selected) {
+            if (selected.value === answers[question]) {
+                score++;
+                feedback += `<p>✅ Question ${question.slice(1)}: Correct!</p>`;
+            } else {
+                feedback += `<p>❌ Question ${question.slice(1)}: Wrong.</p>`;
+            }
+        } else {
+            feedback += `<p>⚠️ Question ${question.slice(1)}: Not answered.</p>`;
+        }
+    }
+
+    feedback += `<p><strong>Your score: ${score}/5</strong></p>`;
+
+    document.getElementById('quiz-feedback').innerHTML = feedback;
+});
+
